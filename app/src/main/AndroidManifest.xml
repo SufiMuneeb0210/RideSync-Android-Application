@@ -12,26 +12,29 @@
         android:theme="@style/Theme.RideSync"
         tools:targetApi="31">
         <activity
-            android:name="._3_3_1_PassStatusScreen"
+            android:name="._9_5_QRShowActivity"
             android:exported="false" />
+        <activity
+            android:name="._3_3_1_PassStatusScreen"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
         <activity
             android:name="._3_3_PassScreen"
             android:exported="false" />
         <activity
-            android:name="._2_3_1_QRCodeGenerator"
-            android:exported="false" />
-        <activity
-            android:name="._2_3_2_QRCodeScanner"
-            android:exported="false" />
-        <activity
             android:name="._3_2_1_TicketHistoryScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
         <activity
             android:name="._3_2_TicketsScreen"
             android:exported="false" />
         <activity
             android:name="._3_1_WalletScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
         <activity
             android:name="._2_2_1_BusInsertFragment"
             android:exported="false"
@@ -69,9 +72,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="._2_3_AdminPassesScreen"
-            android:exported="false"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
+            android:exported="false" />
         <activity
             android:name="._2_2_AdminBusesScreen"
             android:exported="false"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F4F4"
-    tools:context="._2_3_1_QRCodeGenerator">
+    tools:context="._9_5_QRShowActivity">
 
     <ImageView
         android:id="@+id/LoginBackground"
@@ -36,46 +36,20 @@
         android:gravity="center"
         android:layout_marginTop="60dp"
         android:paddingRight="100dp"
-        android:text="QR Code"
+        android:text="QR CODE"
         android:textColor="@color/white"
         android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginUpperWave" />
-    <ImageView
-        android:id="@+id/Qrcodeview"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="-10dp"
-        android:src="@drawable/upperwave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/LoginLowerWave"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginBottom="-10dp"
-        android:src="@drawable/lowerwave"
+        android:id="@+id/qrimage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnSignup"
-        android:fontFamily="@font/ubuntu"
-        android:layout_width="250dp"
-        android:layout_height="65dp"
-        android:text="Generate"
-        android:layout_marginTop="40dp"
-        android:textColor="@color/white"
-        app:cornerRadius="50dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Qrcodeview" />
+        app:layout_constraintTop_toBottomOf="@+id/SigninHeading" />
 </androidx.constraintlayout.widget.ConstraintLayout>

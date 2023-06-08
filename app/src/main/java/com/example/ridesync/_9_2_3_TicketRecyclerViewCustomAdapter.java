@@ -65,6 +65,7 @@ public class _9_2_3_TicketRecyclerViewCustomAdapter extends RecyclerView.Adapter
                     } else {
                         _balance -= _ticketprice;
                         ActivityRef.child("Users").child(sessionManager.getJob()).child(_useremail).child("Money").setValue(_balance);
+                        sessionManager.setBalance(_balance);
                         AlertDialog.Builder builder = new AlertDialog.Builder(context);
                         builder.setTitle("Delete Bus");
                         builder.setMessage("Are you sure you want to Buy this Ticket?");

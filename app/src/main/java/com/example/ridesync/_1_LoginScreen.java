@@ -109,13 +109,11 @@ public class _1_LoginScreen extends AppCompatActivity {
                     int _balance = 0;
                     if(_loginSpinner.equals("Passenger"))
                     {
-                        _balance = Integer.parseInt(snapshot.child(_loginemail).child("Gender").getValue().toString());
+                        _balance = Integer.parseInt(snapshot.child(_loginemail).child("Money").getValue().toString());
                     }
                     if(_passwordreturn.equals(_loginPassword))
                     {
                         sessionManager = new _9_3_SessionManager(getApplicationContext());
-                        sessionManager.setLoggedIn(true);
-                        sessionManager.saveUserDetails(_name,_phone,_passwordreturn,_gender,_loginSpinner,_loginemail);
                         Intent intent = null;
                         if(_loginSpinner.equals("Passenger"))
                         {
@@ -128,7 +126,8 @@ public class _1_LoginScreen extends AppCompatActivity {
                             sessionManager.setActivityName("_2_AdminHomeScreen");
                             intent = new Intent(_1_LoginScreen.this, _2_AdminHomeScreen.class);
                         }
-
+                        sessionManager.setLoggedIn(true);
+                        sessionManager.saveUserDetails(_name,_phone,_passwordreturn,_gender,_loginSpinner,_loginemail);
                         loginPassword.setText("");
                         loginEmail.setText("");
                         loginSpinner.setSelection(0);

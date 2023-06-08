@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="230dp"
+    android:layout_height="420dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
     app:cardCornerRadius="15dp"
@@ -10,14 +11,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp"
-        android:background="@color/Turquoise">
+        android:background="@color/Turquoise"
+        android:padding="5dp">
 
         <TextView
-            android:layout_marginTop="5dp"
             android:id="@+id/txtbusnumber"
             android:layout_width="130dp"
             android:layout_height="35dp"
+            android:layout_marginTop="5dp"
             android:gravity="right"
             android:padding="5dp"
             android:text="Bus ID:"
@@ -29,11 +30,11 @@
 
         <TextView
             android:id="@+id/txtbusnumbershow"
-            android:layout_marginTop="5dp"
             android:layout_width="200dp"
             android:layout_height="35dp"
-            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
             android:text="1"
+            android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtbusnumber"
@@ -43,8 +44,8 @@
             android:id="@+id/txtname"
             android:layout_width="130dp"
             android:layout_height="35dp"
-            android:padding="5dp"
             android:gravity="right"
+            android:padding="5dp"
             android:text="Name:"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -54,9 +55,9 @@
 
         <TextView
             android:id="@+id/txtnameshow"
-            android:text="1"
             android:layout_width="200dp"
             android:layout_height="40dp"
+            android:text="1"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,8 +68,8 @@
             android:id="@+id/txtemail"
             android:layout_width="130dp"
             android:layout_height="35dp"
-            android:padding="5dp"
             android:gravity="right"
+            android:padding="5dp"
             android:text="Email:"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -79,9 +80,9 @@
 
         <TextView
             android:id="@+id/txtemailshow"
-            android:text="1"
             android:layout_width="200dp"
             android:layout_height="35dp"
+            android:text="1"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -92,8 +93,8 @@
             android:id="@+id/txtdate"
             android:layout_width="130dp"
             android:layout_height="35dp"
-            android:padding="5dp"
             android:gravity="right"
+            android:padding="5dp"
             android:text="Dated:"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -104,9 +105,9 @@
 
         <TextView
             android:id="@+id/txtdateshow"
-            android:text="1"
             android:layout_width="200dp"
             android:layout_height="35dp"
+            android:text="1"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,8 +119,8 @@
             android:id="@+id/txtpayment"
             android:layout_width="130dp"
             android:layout_height="40dp"
-            android:padding="5dp"
             android:gravity="right"
+            android:padding="5dp"
             android:text="Payment:"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -130,9 +131,9 @@
 
         <TextView
             android:id="@+id/txtpaymentshow"
-            android:text="1"
             android:layout_width="200dp"
             android:layout_height="35dp"
+            android:text="1"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -143,8 +144,8 @@
             android:id="@+id/txtstatus"
             android:layout_width="130dp"
             android:layout_height="40dp"
-            android:padding="5dp"
             android:gravity="right"
+            android:padding="5dp"
             android:text="Status:"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -155,14 +156,24 @@
 
         <TextView
             android:id="@+id/txtstatusshow"
-            android:text="1"
             android:layout_width="200dp"
             android:layout_height="35dp"
+            android:text="1"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtstatus"
             app:layout_constraintTop_toBottomOf="@+id/txtpaymentshow" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imgqr"
+            android:src="@drawable/noqr"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtstatusshow" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

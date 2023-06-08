@@ -46,12 +46,11 @@ public class _3_3_1_PassStatusScreen extends AppCompatActivity implements Adapte
     }
 
     private void ListView() {
-        ActivityRef.child("Pass").child(sessionManager.getEmail()).addValueEventListener(new ValueEventListener() {
+        ActivityRef.child("Pass").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
-                    Log.d("Snap",dataSnapshot.toString());
                     _9_ModelPassData newdata = new _9_ModelPassData();
                     newdata.setStatus(dataSnapshot.child("Status").getValue().toString());
                     newdata.set_passHoldername(sessionManager.getName());
@@ -60,6 +59,7 @@ public class _3_3_1_PassStatusScreen extends AppCompatActivity implements Adapte
                     newdata.set_passDays(Integer.parseInt(dataSnapshot.child("Month").getValue().toString()));
                     newdata.set_passPayment(Integer.parseInt(dataSnapshot.child("TotalPayment").getValue().toString()));
                     newdata.set_passDate(dataSnapshot.child("Datad").getValue().toString());
+
 
                     list.add(newdata);
                 }
@@ -95,7 +95,7 @@ public class _3_3_1_PassStatusScreen extends AppCompatActivity implements Adapte
     private void Search(String _parameter, String _secondmessage)
     {
         list.clear();
-        ActivityRef.child("Pass").child(sessionManager.getEmail()).addListenerForSingleValueEvent(new ValueEventListener() {
+        ActivityRef.child("Pass").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 int Counter = 0;
@@ -103,7 +103,6 @@ public class _3_3_1_PassStatusScreen extends AppCompatActivity implements Adapte
                 {
                     if(dataSnapshot.child("Status").getValue().toString().equals(_parameter))
                     {
-                        Log.d("Snap",dataSnapshot.toString());
                         _9_ModelPassData newdata = new _9_ModelPassData();
                         newdata.setStatus(dataSnapshot.child("Status").getValue().toString());
                         newdata.set_passHoldername(sessionManager.getName());
@@ -150,4 +149,5 @@ public class _3_3_1_PassStatusScreen extends AppCompatActivity implements Adapte
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
 }

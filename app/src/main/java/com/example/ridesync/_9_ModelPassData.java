@@ -1,14 +1,36 @@
 package com.example.ridesync;
 
+import android.graphics.Bitmap;
+
 import java.util.Date;
 
 public class _9_ModelPassData {
     String _passDate;
+    String _key;
+
+    public String get_key() {
+        return _key;
+    }
+
+    public void set_key(String _key) {
+        this._key = _key;
+    }
+
     int _passDays,_passPayment;
     String _passHoldername;
     String _passHolderEmail;
     String _busNumber;
     String Status;
+
+    Bitmap qrcode;
+
+    public Bitmap getQrcode() {
+        return qrcode;
+    }
+
+    public void setQrcode(Bitmap qrcode) {
+        this.qrcode = qrcode;
+    }
 
     public String get_busNumber() {
         return _busNumber;

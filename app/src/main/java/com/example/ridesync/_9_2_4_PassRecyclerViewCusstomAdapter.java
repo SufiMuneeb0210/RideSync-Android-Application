@@ -3,6 +3,8 @@ package com.example.ridesync;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.gson.Gson;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import java.util.ArrayList;
 
@@ -48,7 +56,7 @@ public class _9_2_4_PassRecyclerViewCusstomAdapter extends RecyclerView.Adapter<
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ActivityRef.child("Users").child(sessionManager.getJob()).child(_useremail).child("Money").setValue(_balance);
+                    ActivityRef.child("Users").child("Passenger").child(pass.get_passHolderEmail()).child("Money").setValue(_balance);
                     AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     builder.setTitle("Reject pass");
                     builder.setMessage("Are you sure you want to But he Pass?");
@@ -56,17 +64,21 @@ public class _9_2_4_PassRecyclerViewCusstomAdapter extends RecyclerView.Adapter<
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
-                            String key = ActivityRef.child("Pass").child(_useremail).push().getKey();
-                            ActivityRef.child("Pass").child(_useremail).child(key).child("Status").setValue("Approved");
 
+                            ActivityRef.child("Pass").child(pass.get_passHolderEmail()).child("Status").setValue("Approved");
                             Toast.makeText(context, "Pass Alloted Successfully", Toast.LENGTH_SHORT).show();
+                            Gson gson = new Gson();
+                            String json = gson.toJson(pass);
+                            Intent intent = new Intent(context, _9_5_QRShowActivity.class);
+                            intent.putExtra("data", json);
+                            context.startActivity(intent);
                         }
                     });
                     builder.setNegativeButton("Reject", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            String key = ActivityRef.child("Pass").child(_useremail).push().getKey();
-                            ActivityRef.child("Pass").child(_useremail).child(key).child("Status").setValue("Rejected");
+                            String key = ActivityRef.child("Pass").child(pass.get_passHolderEmail()).push().getKey();
+                            ActivityRef.child("Pass").child(pass.get_passHolderEmail()).child(key).child("Status").setValue("Rejected");
                             Toast.makeText(context, "Pass Rejected", Toast.LENGTH_SHORT).show();
                         }
                     });

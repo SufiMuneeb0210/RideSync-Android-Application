@@ -52,4 +52,12 @@ public class _3_1_WalletScreen extends AppCompatActivity {
         txtcurrentbalance.setText(String.valueOf(_balancecurrent));
         sessionManager.setBalance(_balancecurrent);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, _3_PassengerHomeScreen.class);
+        startActivity(intent);
+
+    }
 }

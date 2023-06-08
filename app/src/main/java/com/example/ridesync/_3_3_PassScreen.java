@@ -34,7 +34,6 @@ public class _3_3_PassScreen extends AppCompatActivity implements AdapterView.On
 
     private DatabaseReference ActivityRef;
     _9_3_SessionManager sessionManager;
-
     private Spinner spinnerMonth;
     private EditText edtName,edtEmail, edtbusNumber, edttotalpayment,edtcurrentbalance;
     @Override
@@ -60,13 +59,11 @@ public class _3_3_PassScreen extends AppCompatActivity implements AdapterView.On
                 Apply(v);
             }
         });
-
-        Button btnStatus=findViewById(R.id.btnhistory);
-        btnStatus.setOnClickListener(new View.OnClickListener() {
+        Button btnhistory = findViewById(R.id.btnhistory);
+        btnhistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(_3_3_PassScreen.this,_3_3_1_PassStatusScreen.class);
+                Intent intent = new Intent(_3_3_PassScreen.this, _3_3_1_PassStatusScreen.class);
                 startActivity(intent);
             }
         });
@@ -87,28 +84,24 @@ public class _3_3_PassScreen extends AppCompatActivity implements AdapterView.On
 
     }
     private void FirebaseRegister(String _edtname, String _edtemail, String _edtbusNumber, String _edttotalpayment, String _edtmonth) {
-        if(sessionManager.getBalance()<Integer.parseInt(_edttotalpayment.toString()))
-        {
-            Toast.makeText(this, "Insufficient Balance", Toast.LENGTH_SHORT).show();
-            return;
-        }
         try {
             ActivityRef.child("Pass").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     String key = ActivityRef.child("Pass").child(_edtemail).push().getKey();
-                    ActivityRef.child("Pass").child(_edtemail).child(key).child("Name").setValue(_edtname);
-                    ActivityRef.child("Pass").child(_edtemail).child(key).child("Email").setValue(_edtemail);
-                    ActivityRef.child("Pass").child(_edtemail).child(key).child("BusNumber").setValue(_edtbusNumber);
-                    ActivityRef.child("Pass").child(_edtemail).child(key).child("TotalPayment").setValue(_edttotalpayment);
-                    ActivityRef.child("Pass").child(_edtemail).child(key).child("Month").setValue(_edtmonth);
+
+                    ActivityRef.child("Pass").child(_edtemail).child("Name").setValue(_edtname);
+                    ActivityRef.child("Pass").child(_edtemail).child("Email").setValue(_edtemail);
+                    ActivityRef.child("Pass").child(_edtemail).child("BusNumber").setValue(_edtbusNumber);
+                    ActivityRef.child("Pass").child(_edtemail).child("TotalPayment").setValue(_edttotalpayment);
+                    ActivityRef.child("Pass").child(_edtemail).child("Month").setValue(_edtmonth);
                     SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
                     Date currentDate = new Date();
                     String formattedDate = dateFormat.format(currentDate);
-                    ActivityRef.child("Pass").child(_edtemail).child(key).child("Datad").setValue(formattedDate);
-                    ActivityRef.child("Pass").child(_edtemail).child(key).child("Status").setValue("Pending");
+                    ActivityRef.child("Pass").child(_edtemail).child("Datad").setValue(formattedDate);
+                    ActivityRef.child("Pass").child(_edtemail).child("Status").setValue("Pending");
 
-                    Toast.makeText(_3_3_PassScreen.this, "Pass Applied Successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(_3_3_PassScreen.this, "Pass Application Successfully", Toast.LENGTH_SHORT).show();
 
                     edtEmail.setText("");
                     edtName.setText("");
@@ -194,6 +187,13 @@ public class _3_3_PassScreen extends AppCompatActivity implements AdapterView.On
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, _3_PassengerHomeScreen.class);
+        startActivity(intent);
 
     }
 }

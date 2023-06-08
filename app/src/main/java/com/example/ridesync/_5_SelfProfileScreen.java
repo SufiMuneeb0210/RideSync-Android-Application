@@ -145,4 +145,19 @@ public class _5_SelfProfileScreen extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if(session.getJob().equals("Admin"))
+        {
+            Intent intent = new Intent(this, _2_AdminHomeScreen.class);
+            startActivity(intent);
+        }
+        else
+        {
+            Intent intent = new Intent(this, _3_PassengerHomeScreen.class);
+            startActivity(intent);
+        }
+
+    }
 }

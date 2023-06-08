@@ -1,7 +1,10 @@
 package com.example.ridesync;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,22 +38,21 @@ public class _2_3_AdminPassesScreen extends AppCompatActivity implements Adapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_331_pass_status_screen);
+        setContentView(R.layout.activity_23_admin_passes_screen);
         sessionManager=new _9_3_SessionManager(getApplicationContext());
         Viewsetup();
     }
 
     private void ListView() {
-        ActivityRef.child("Pass").child(sessionManager.getEmail()).addValueEventListener(new ValueEventListener() {
+        list.clear();
+        ActivityRef.child("Pass").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-
-                    Log.d("Snap",dataSnapshot.toString());
                     _9_ModelPassData newdata = new _9_ModelPassData();
                     newdata.setStatus(dataSnapshot.child("Status").getValue().toString());
-                    newdata.set_passHoldername(sessionManager.getName());
-                    newdata.set_passHolderEmail(sessionManager.getEmail());
+                    newdata.set_passHoldername(dataSnapshot.child("Name").getValue().toString());
+                    newdata.set_passHolderEmail(dataSnapshot.child("Email").getValue().toString());
                     newdata.set_busNumber(dataSnapshot.child("BusNumber").getValue().toString());
                     newdata.set_passDays(Integer.parseInt(dataSnapshot.child("Month").getValue().toString()));
                     newdata.set_passPayment(Integer.parseInt(dataSnapshot.child("TotalPayment").getValue().toString()));
@@ -90,7 +92,7 @@ public class _2_3_AdminPassesScreen extends AppCompatActivity implements Adapter
     private void Search(String _parameter, String _secondmessage)
     {
         list.clear();
-        ActivityRef.child("Pass").child(sessionManager.getEmail()).addListenerForSingleValueEvent(new ValueEventListener() {
+        ActivityRef.child("Pass").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 int Counter = 0;
@@ -98,11 +100,10 @@ public class _2_3_AdminPassesScreen extends AppCompatActivity implements Adapter
                 {
                     if(dataSnapshot.child("Status").getValue().toString().equals(_parameter))
                     {
-                        Log.d("Snap",dataSnapshot.toString());
                         _9_ModelPassData newdata = new _9_ModelPassData();
                         newdata.setStatus(dataSnapshot.child("Status").getValue().toString());
-                        newdata.set_passHoldername(sessionManager.getName());
-                        newdata.set_passHolderEmail(sessionManager.getEmail());
+                        newdata.set_passHoldername(dataSnapshot.child("Name").getValue().toString());
+                        newdata.set_passHolderEmail(dataSnapshot.child("Email").getValue().toString());
                         newdata.set_busNumber(dataSnapshot.child("BusNumber").getValue().toString());
                         newdata.set_passDays(Integer.parseInt(dataSnapshot.child("Month").getValue().toString()));
                         newdata.set_passPayment(Integer.parseInt(dataSnapshot.child("TotalPayment").getValue().toString()));
@@ -136,13 +137,19 @@ public class _2_3_AdminPassesScreen extends AppCompatActivity implements Adapter
             ListView();
         }
         else {
-            list.clear();
             Search(_spinner.getSelectedItem().toString(),"No such Passes exist");
         }
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, _2_AdminHomeScreen.class);
+        startActivity(intent);
 
     }
 }

@@ -1,5 +1,6 @@
 package com.example.ridesync;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -59,6 +60,13 @@ public class _2_2_AdminBusesScreen extends AppCompatActivity implements AdapterV
     }
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, _2_AdminHomeScreen.class);
+        startActivity(intent);
 
     }
 }

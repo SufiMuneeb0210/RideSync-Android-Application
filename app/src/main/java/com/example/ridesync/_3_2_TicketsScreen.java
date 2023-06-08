@@ -212,6 +212,13 @@ public class _3_2_TicketsScreen extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, _3_PassengerHomeScreen.class);
+        startActivity(intent);
+
+    }
 
 }
 
