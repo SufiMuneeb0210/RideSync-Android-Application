@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "55831051529",
+    "project_id": "ridesync-e734d",
+    "storage_bucket": "ridesync-e734d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55831051529:android:40f5fa1560afd33484a7d8",
+        "android_client_info": {
+          "package_name": "com.example.ridesync"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55831051529-qslffg88l48ei5sbur0qgub4p88n8sv0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPeqSeUJyXxYpX8ry8uVoZM_TBcAnoyPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55831051529-qslffg88l48ei5sbur0qgub4p88n8sv0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

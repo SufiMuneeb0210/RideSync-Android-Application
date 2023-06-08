@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:background="@color/Turquoise">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/txtbusnumber"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="Bus ID:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtbusnumbershow"
+            android:layout_marginTop="5dp"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:text="1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtbusnumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtname"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Name:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtbusnumber" />
+
+        <TextView
+            android:id="@+id/txtnameshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtname"
+            app:layout_constraintTop_toBottomOf="@+id/txtbusnumbershow" />
+
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Email:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtname" />
+
+
+        <TextView
+            android:id="@+id/txtemailshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtemail"
+            app:layout_constraintTop_toBottomOf="@+id/txtnameshow" />
+
+        <TextView
+            android:id="@+id/txtdate"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Dated:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtemail" />
+
+
+        <TextView
+            android:id="@+id/txtdateshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtpayment"
+            app:layout_constraintTop_toBottomOf="@+id/txtemailshow" />
+
+
+        <TextView
+            android:id="@+id/txtpayment"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Payment:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtdate" />
+
+
+        <TextView
+            android:id="@+id/txtpaymentshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtemail"
+            app:layout_constraintTop_toBottomOf="@+id/txtdateshow" />
+
+        <TextView
+            android:id="@+id/txtstatus"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Status:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtpayment" />
+
+
+        <TextView
+            android:id="@+id/txtstatusshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtstatus"
+            app:layout_constraintTop_toBottomOf="@+id/txtpaymentshow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

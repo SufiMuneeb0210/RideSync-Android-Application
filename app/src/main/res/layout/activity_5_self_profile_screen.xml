@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    tools:context="._5_SelfProfileScreen">
+
+    <ImageView
+        android:id="@+id/LoginUpperWave"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="-10dp"
+        android:src="@drawable/upperwave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/SigninHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Account Details"
+        android:textColor="@color/Turquoise"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginUpperWave" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Name"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SigninHeading" />
+
+    <TextView
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Email"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtname" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Password"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="textPassword"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtemail" />
+
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Contact"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="phone"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtpassword" />
+
+
+    <Spinner
+        android:id="@+id/edtgender"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/listbackground"
+        android:entries="@array/Gender"
+        android:fontFamily="@font/ubuntu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtcontact" />
+
+    <ImageView
+        android:id="@+id/LoginLowerWave"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="-10dp"
+        android:src="@drawable/lowerwave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnupdate"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/Turquoise"
+        android:fontFamily="@font/ubuntu"
+        android:onClick="Update"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtgender" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

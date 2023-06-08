@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="15dp"
+    android:layout_margin="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:background="@color/Turquoise">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/txtbusnumber"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="Bus ID:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtbusnumbershow"
+            android:layout_marginTop="5dp"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:text="1"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtbusnumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtto"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Destination:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtbusnumber" />
+
+        <TextView
+            android:id="@+id/txttoshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtto"
+            app:layout_constraintTop_toBottomOf="@+id/txtbusnumbershow" />
+
+        <TextView
+            android:id="@+id/txtfrom"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Source:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtto" />
+
+
+        <TextView
+            android:id="@+id/txtfromshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtfrom"
+            app:layout_constraintTop_toBottomOf="@+id/txttoshow" />
+
+        <TextView
+            android:id="@+id/txttime"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Time:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtfrom" />
+
+
+        <TextView
+            android:id="@+id/txttimeshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txttime"
+            app:layout_constraintTop_toBottomOf="@+id/txtfromshow" />
+
+        <TextView
+            android:id="@+id/txttotalseats"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Seats:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txttime" />
+
+
+        <TextView
+            android:id="@+id/txttotalseatsshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txttotalseats"
+            app:layout_constraintTop_toBottomOf="@+id/txttimeshow" />
+
+        <TextView
+            android:id="@+id/txtcapacity"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Booked:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txttotalseats" />
+
+
+        <TextView
+            android:id="@+id/txtcapacityshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtcapacity"
+            app:layout_constraintTop_toBottomOf="@+id/txttotalseatsshow" />
+
+        <TextView
+            android:id="@+id/txtfare"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:gravity="right"
+            android:text="Fare:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtcapacity" />
+
+
+        <TextView
+            android:id="@+id/txtfareshow"
+            android:text="1"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtfare"
+            app:layout_constraintTop_toBottomOf="@+id/txtcapacityshow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

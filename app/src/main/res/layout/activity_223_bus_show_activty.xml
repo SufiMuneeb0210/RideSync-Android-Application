@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    tools:context="._2_2_3_BusShowActivty">
+
+
+    <ImageView
+        android:id="@+id/LoginUpperWave"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="-10dp"
+        android:src="@drawable/upperwave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/SigninHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Data Retrived"
+        android:textColor="@color/Turquoise"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginUpperWave" />
+
+    <TextView
+        android:id="@+id/edtbusnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/edittextunderline"
+        android:fontFamily="@font/ubuntu"
+        android:hint="Bus Number"
+        android:padding="15dp"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SigninHeading" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtFrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Source"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtbusnumber" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Destination"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFrom" />
+
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtseats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Total Seats"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="numberDecimal"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtto" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtcurrentseats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Booked Seats"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="number"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtseats" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtfair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Fare"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="number"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtcurrentseats" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Departure Time"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="datetime"
+        android:textColor="@color/Turquoise"
+        android:textColorHint="@color/Turquoise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtfair" />
+
+
+    <ImageView
+        android:id="@+id/LoginLowerWave"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="-10dp"
+        android:src="@drawable/lowerwave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnupdate"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/Turquoise"
+        android:fontFamily="@font/ubuntu"
+        android:text="Update"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTime" />
+
+    <Button
+        android:id="@+id/btndelete"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ubuntu"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnupdate"
+        app:layout_constraintTop_toBottomOf="@+id/edtTime" />
+</androidx.constraintlayout.widget.ConstraintLayout>

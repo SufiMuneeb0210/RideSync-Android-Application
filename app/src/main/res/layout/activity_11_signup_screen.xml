@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    tools:context="._1_1_SignupScreen">
+
+    <ImageView
+        android:id="@+id/LoginBackground"
+        android:layout_width="800dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/mainbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/LoginUpperWave"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="-10dp"
+        android:src="@drawable/upperwave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/SigninHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:paddingRight="100dp"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginUpperWave" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Name"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SigninHeading" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Email"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtname" />
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Password"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtemail" />
+
+
+    <EditText
+        android:fontFamily="@font/ubuntu"
+        android:id="@+id/edtcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittextunderline"
+        android:hint="Contact"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:layout_margin="20dp"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtpassword" />
+
+    <Spinner
+        android:id="@+id/edtgender"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/ubuntu"
+        android:background="@drawable/listbackground"
+        android:entries="@array/Gender"
+        app:layout_constraintEnd_toStartOf="@+id/edtnatureofwork"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtcontact" />
+
+    <Spinner
+        android:id="@+id/edtnatureofwork"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/ubuntu"
+        android:background="@drawable/listbackground"
+        android:entries="@array/Nature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtcontact" />
+
+    <ImageView
+        android:id="@+id/LoginLowerWave"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="-10dp"
+        android:src="@drawable/lowerwave"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:fontFamily="@font/ubuntu"
+        android:layout_width="250dp"
+        android:layout_height="65dp"
+        android:backgroundTint="@color/white"
+        android:text="Register"
+        android:onClick="Sign_up"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/Turquoise"
+        app:cornerRadius="50dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtgender" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:fontFamily="@font/ubuntu"
+        android:layout_width="250dp"
+        android:layout_height="65dp"
+        android:text="log in"
+        android:onClick="MovetoLogin"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        app:cornerRadius="50dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

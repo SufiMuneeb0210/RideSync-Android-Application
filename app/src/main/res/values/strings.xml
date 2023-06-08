@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">RideSync</string>
+    <string-array name="Gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="Nature">
+        <item>Job Nature</item>
+        <item>Passenger</item>
+    </string-array>
+    <string-array name="LoginPerson">
+        <item>Who?</item>
+        <item>Admin</item>
+        <item>Passenger</item>
+    </string-array>
+    <string-array name="AdminProfilesAction">
+        <item>Action?</item>
+        <item>Insert</item>
+    </string-array>
+    <string-array name="AdminNature">
+        <item>Job Nature</item>
+        <item>Admin</item>
+        <item>Passenger</item>
+    </string-array>
+    <string-array name="SearchNature">
+        <item>Admin</item>
+        <item>Passenger</item>
+    </string-array>
+    <string-array name="ActionTickets">
+        <item>Buy</item>
+        <item>History</item>
+    </string-array>
+    <string-array name="FilterTickets">
+        <item>Filter?</item>
+        <item>Bus ID</item>
+        <item>Source</item>
+        <item>Destination</item>
+    </string-array>
+    <string-array name="FilterStatus">
+        <item>Filter?</item>
+        <item>Pending</item>
+        <item>Approved</item>
+        <item>Rejected</item>
+    </string-array>
+    <string-array name="Months">
+        <item>Months?</item>
+        <item>1</item>
+        <item>3</item>
+        <item>6</item>
+    </string-array>
+</resources>
